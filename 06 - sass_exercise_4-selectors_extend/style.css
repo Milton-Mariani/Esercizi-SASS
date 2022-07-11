@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body div h2, body div h1 {
+  color: green;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+body div {
+  width: 80%;
+  height: 50;
+  border: 1px solid red;
+  text-align: center;
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  row-gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body div h1 {
+  text-decoration: underline;
+}
+body div h2 {
+  border: 1px solid red;
+  padding: 1rem;
+}
+body div section {
+  display: flex;
+  flex-direction: row;
+}
+body div section .uno {
+  color: blue;
+  border-color: green;
+  font-size: 1rem;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+body div section .due {
+  color: red;
+  border-color: green;
+  font-size: 1rem;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+body div section .tre {
+  color: blue;
+  border-color: green;
+  font-size: 1rem;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+body div section .quattro {
+  color: red;
+  border-color: green;
+  font-size: 1rem;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+body div section {
+  margin: 0 auto;
+  display: flex;
+}
+body div section article {
+  color: green;
+  border-color: green;
+  font-size: 24px;
+  border: 1px solid;
+  height: auto;
+}/*# sourceMappingURL=style.css.map */

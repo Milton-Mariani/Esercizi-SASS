@@ -1,0 +1,259 @@
+
+@use 'base';
+@use 'function';
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+@mixin section-blue {
+    color: blue;
+    border-color: green;
+    font-size: 1rem;
+}
+
+@mixin section-red {
+    color: red;
+    border-color: green;
+    font-size: 1rem;
+}
+
+@mixin footer-style {
+    color: green;
+    border-color: green;
+    font-size: function.rem(24);
+}
+
+
+$title-color: green;
+$main-div-border: function.rem(1) solid red;
+
+
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    div {
+        width: 80%;
+        // height: ;
+        border: $main-div-border;
+        text-align: center;
+        padding: 1rem;
+        display: grid;
+        
+        grid-template-rows: auto auto auto;
+        row-gap: 1rem;
+        
+
+        h1 {
+            color: $title-color;
+            text-decoration: underline;   
+        }
+
+        section {
+            display: flex;
+            flex-direction: row;
+
+
+
+            .uno {
+                @include section-blue();
+                width: auto;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0.5rem;
+                
+    
+            }
+    
+    
+            .due {
+                @include section-red();
+                width: auto;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0.5rem;
+
+            }
+    
+    
+    
+    
+            .tre {
+                @include section-blue();
+                width: auto;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0.5rem;
+    
+            }
+    
+    
+    
+            .quattro {
+                @include section-red();
+                width: auto;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0.5rem;
+
+    
+            }
+    
+    
+        }
+
+        section {
+            margin: 0 auto;
+            display: flex;
+
+
+
+            article {
+                @include footer-style;
+                border: function.rem(1) solid;
+                height: auto;
+            }
+        }
+
+
+
+    }
+    
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

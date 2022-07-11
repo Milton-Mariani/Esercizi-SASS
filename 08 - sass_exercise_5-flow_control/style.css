@@ -1,0 +1,230 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.fs-1rem {
+  font-size: 1rem;
+}
+
+.fs-2rem {
+  font-size: 2rem;
+}
+
+.fs-3rem {
+  font-size: 3rem;
+}
+
+section:nth-of-type(2) div:nth-child(1) {
+  background: #f2f2f2;
+}
+section:nth-of-type(2) div:nth-child(2) {
+  background: #e6e6e6;
+}
+section:nth-of-type(2) div:nth-child(3) {
+  background: #d9d9d9;
+}
+section:nth-of-type(2) div:nth-child(4) {
+  background: #cccccc;
+}
+section:nth-of-type(2) div:nth-child(5) {
+  background: #bfbfbf;
+}
+section:nth-of-type(2) div:nth-child(6) {
+  background: #b3b3b3;
+}
+section:nth-of-type(2) div:nth-child(7) {
+  background: #a6a6a6;
+}
+section:nth-of-type(2) div:nth-child(8) {
+  background: #999999;
+}
+section:nth-of-type(2) div:nth-child(9) {
+  background: #8c8c8c;
+}
+section:nth-of-type(2) div:nth-child(10) {
+  background: gray;
+}
+section:nth-of-type(2) div:nth-child(11) {
+  background: #737373;
+}
+section:nth-of-type(2) div:nth-child(12) {
+  background: #666666;
+}
+section:nth-of-type(2) div:nth-child(13) {
+  background: #595959;
+}
+section:nth-of-type(2) div:nth-child(14) {
+  background: #4d4d4d;
+}
+section:nth-of-type(2) div:nth-child(15) {
+  background: #404040;
+}
+section:nth-of-type(2) div:nth-child(16) {
+  background: #333333;
+}
+section:nth-of-type(2) div:nth-child(17) {
+  background: #262626;
+}
+section:nth-of-type(2) div:nth-child(18) {
+  background: #1a1a1a;
+}
+section:nth-of-type(2) div:nth-child(19) {
+  background: #0d0d0d;
+}
+
+section:nth-of-type(2) div:nth-child(1) {
+  color: #0d0d0d;
+}
+section:nth-of-type(2) div:nth-child(2) {
+  color: #1a1a1a;
+}
+section:nth-of-type(2) div:nth-child(3) {
+  color: #262626;
+}
+section:nth-of-type(2) div:nth-child(4) {
+  color: #333333;
+}
+section:nth-of-type(2) div:nth-child(5) {
+  color: #404040;
+}
+section:nth-of-type(2) div:nth-child(6) {
+  color: #4d4d4d;
+}
+section:nth-of-type(2) div:nth-child(7) {
+  color: #595959;
+}
+section:nth-of-type(2) div:nth-child(8) {
+  color: #666666;
+}
+section:nth-of-type(2) div:nth-child(9) {
+  color: #737373;
+}
+section:nth-of-type(2) div:nth-child(10) {
+  color: gray;
+}
+section:nth-of-type(2) div:nth-child(11) {
+  color: #8c8c8c;
+}
+section:nth-of-type(2) div:nth-child(12) {
+  color: #999999;
+}
+section:nth-of-type(2) div:nth-child(13) {
+  color: #a6a6a6;
+}
+section:nth-of-type(2) div:nth-child(14) {
+  color: #b3b3b3;
+}
+section:nth-of-type(2) div:nth-child(15) {
+  color: #bfbfbf;
+}
+section:nth-of-type(2) div:nth-child(16) {
+  color: #cccccc;
+}
+section:nth-of-type(2) div:nth-child(17) {
+  color: #d9d9d9;
+}
+section:nth-of-type(2) div:nth-child(18) {
+  color: #e6e6e6;
+}
+section:nth-of-type(2) div:nth-child(19) {
+  color: #f2f2f2;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+body div {
+  width: 80%;
+  height: 50%;
+  border: 0.0625rem solid red;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body div h1 {
+  color: green;
+  text-decoration: underline;
+}
+body div h2 {
+  border: 1px solid red;
+}
+body div .sec1 {
+  display: flex;
+  flex-direction: row;
+}
+body div .sec1 .uno {
+  color: blue;
+  border-color: green;
+  font-size: 1rem;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+body div .sec1 .due {
+  color: red;
+  border-color: green;
+  font-size: 1rem;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+body div .sec1 .tre {
+  color: blue;
+  border-color: green;
+  font-size: 1rem;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+body div .sec1 .quattro {
+  color: red;
+  border-color: green;
+  font-size: 1rem;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+body div .sec2 {
+  gap: 1rem;
+  justify-content: space-between;
+  min-width: 100%;
+  display: flex;
+}
+body div .sec2 div {
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border: 0.0625rem solid red;
+}
+body div .sec2 div .fs {
+  text-align: initial;
+}
+body div .sec3 {
+  margin: 0 auto;
+  display: flex;
+}
+body div .sec3 article {
+  color: green;
+  border-color: green;
+  font-size: 1.5rem;
+  border: 0.0625rem solid;
+  height: auto;
+}/*# sourceMappingURL=style.css.map */

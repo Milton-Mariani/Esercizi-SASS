@@ -1,0 +1,336 @@
+
+@use 'base';
+@use 'function';
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+@mixin section-blue {
+    color: blue;
+    border-color: green;
+    font-size: 1rem;
+}
+
+@mixin section-red {
+    color: red;
+    border-color: green;
+    font-size: 1rem;
+}
+
+@mixin footer-style {
+    color: green;
+    border-color: green;
+    font-size: function.rem(24);
+}
+
+
+$title-color: green;
+$main-div-border: function.rem(1) solid red;
+
+
+
+
+
+
+$sizes: 1rem, 2rem, 3rem;
+
+@each $rem in $sizes {
+    .fs-#{$rem} {
+        font-size: $rem;
+    }
+}
+
+
+
+
+
+section:nth-of-type(2) div {
+@for $i from 1 through 19 {
+    &:nth-child(#{$i}) {
+        background: darken($color: white, $amount: $i * 5%);
+    }
+  }
+}
+
+
+
+section:nth-of-type(2) div {
+    @for $i from 1 through 19 {
+        &:nth-child(#{$i}) {
+            color: lighten($color: black , $amount: $i * 5%);
+        }
+       }
+    }
+
+
+
+    // section:nth-of-type(2) div:nth-child(10) {
+    //     @for $i from 1 through 19 {
+    //         &:nth-child(#{$i}) {
+    //             color: lighten($color: black , $amount: $i * 5%);
+    //         }
+    //     }
+    // }
+
+
+
+
+
+
+// -------------------------------------------------------------------------
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    div {
+        width: 80%;
+        height: 50%;
+        border: $main-div-border;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+
+        h1 {
+            color: $title-color;
+            text-decoration: underline;
+        }
+
+        h2 {
+            border: 1px solid red;
+        }
+
+        
+
+        .sec1 {
+            display: flex;
+            flex-direction: row;
+
+
+
+            .uno {
+                @include section-blue();
+                width: auto;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0.5rem;
+                
+    
+            }
+    
+    
+            .due {
+                @include section-red();
+                width: auto;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0.5rem;
+
+            }
+    
+    
+    
+    
+            .tre {
+                @include section-blue();
+                width: auto;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0.5rem;
+    
+            }
+    
+    
+    
+            .quattro {
+                @include section-red();
+                width: auto;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0.5rem;
+
+    
+            }
+    
+    
+        }
+
+        .sec2 {
+            gap: 1rem;
+            justify-content: space-between;
+            min-width: 100%;
+            display: flex;
+                    div {
+                        width: function.rem(45);
+                        height: function.rem(45);
+                        border: function.rem(1) solid red;
+
+                        .fs {
+                            text-align: initial;
+                            // risolvere la posizione originaria dei numeri
+                        }
+                    }
+        }
+
+
+
+
+
+
+
+
+
+
+        .sec3 {
+            margin: 0 auto;
+            display: flex;
+
+
+
+            article {
+                @include footer-style;
+                border: function.rem(1) solid;
+                height: auto;
+            }
+        }
+
+
+
+    }
+    
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
