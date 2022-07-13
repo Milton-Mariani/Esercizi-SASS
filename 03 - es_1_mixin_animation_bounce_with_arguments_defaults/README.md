@@ -12,3 +12,12 @@ Dunque la mixin avrà 2 valori di default nei parametri:
 Come possiamo vedere nell'esempio che segue abbiamo intercettato che si parte da 0 e si arriva a massimo -30px (quando si trova al 40% dell'animazione)
 Nel momento in cui si è al 60% bisogna assegnare la metà della distanza di traslazione parametrizzata.
 Ad esempio se al 40% abbiamo -30px al 60% dovremmo avere -30px/2
+
+
+----------------------------
+
+Esempio: 
+
+@keyframes bounce { /* animazione / 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} / 0 rappresenta il valore di partenza / 40% {transform: translateY(-30px);} / -30px rappresenta il valore al 40% dell'animazione / 60% {transform: translateY(-15px);} / -15px rappresenta il valore al 60% dell'animazione */ }
+
+.bounce { /* classe con animazione correlata */ animation-duration: 1s; animation-name: bounce; }
