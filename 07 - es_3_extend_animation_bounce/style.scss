@@ -1,0 +1,278 @@
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+// -----------------------------------------------------
+
+
+@mixin balla($partenza, $distanza) {
+    @keyframes bounce { 
+        0%, 20%, 50%, 80%, 100% { transform: translateY($partenza);} 
+    
+    
+            40% {transform: translateY($distanza * 2);}
+
+        
+            60% {transform: translateY($distanza / 2);}
+
+            }
+}
+
+// ==========================================================================
+
+
+
+
+@function random-hex() {
+    $rgb: "";
+    $color: "";
+    $hex: "";
+    $i: 1;
+    $x: 1;
+    $z: 1;
+
+    @while $i > 0 {
+      $hex-unit: random(16) - 1;
+      $letters: A, B, C, D, E, F;
+
+      @if $hex-unit > 9 {
+        $hex-unit: nth($letters, ($hex-unit - 9));
+      }
+
+      $rgb: str-insert($rgb, ("" + $hex-unit) + ("" + $hex-unit), 0 );
+      $i: $i - 1;
+
+    }
+
+    @while $x > 0 {
+          $hex-unit: random(16) - 1;
+          $letters: A, B, C, D, E, F;
+          
+          @if $hex-unit > 9 { 
+            $hex-unit: nth($letters, ($hex-unit - 9));
+          }
+
+          $rgb: str-insert($rgb, ("" +  $hex-unit) + ("" + $hex-unit), 0 );
+
+          $x: $x - 1;
+    }
+
+    @while $z > 0 {
+        $hex-unit: random(16) - 1;
+        $letters: A, B, C, D, E, F;
+
+        @if $hex-unit > 9 {
+          $hex-unit: nth($letters, ($hex-unit - 9));
+        }
+                //stringa provenienza   //stringa che inserisco //0: posizione di dove lo inserisco(inizio)
+        $rgb: str-insert($rgb, ("" + $hex-unit) + ("" + $hex-unit), 0);
+        $z: $z - 1;
+    }                                                                
+    // $value: #{$rgb} + #{$color} + #{$hex}; 
+
+    $value: $rgb + $color + $hex;
+
+
+    @return unquote("#" + "#{$value}");
+
+}
+
+#
+
+
+// ============================================================================
+              
+
+
+@mixin sizes($size) {
+    width: $size;
+    height: $size;
+}
+
+// ==============================================================================
+
+
+
+
+
+
+    body {
+       height: 100vh;
+       width: 100vw;
+       display: flex;
+       justify-content: space-evenly;
+       align-items: center;
+       background-color: random-hex();
+
+
+
+
+            div {
+                @include sizes(200px);
+                background-color: red;
+                border: 3px solid black;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 2rem;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                text-align: center;
+                color: aliceblue;
+                border-radius: 50%;
+
+            }
+
+            .bounce { 
+                animation-duration: 1s;
+                animation-name: bounce;
+                @include balla(0, -30px );
+                animation-iteration-count: infinite;
+                $i: 1;
+                @while $i <= 12 {
+                  &:nth-child( 0n + #{$i}) {
+                    background-color: random-hex();
+                  }
+                  $i: $i + 1;
+
+
+
+ 
+                }
+
+
+            }
+
+           
+    }
+
+
+
+
+
+// ----------------------------------------------------------
+
+
+               
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Patrizio Esposito17:18
+
+// https://www.youtube.com/watch?v=_a5j7KoflTs
+
+// Patrizio Esposito17:21
+
+// background-image: url('#{variable}/ghf/')
+
+// $variable
+
+// ghf, $variabile
+
+
+
+
+// background-image: url('#{variable}/ghf/')
+
+
+
+
+
+
+
+// Patrizio Esposito17:22
+
+// ciao, Milton
+
+
+
+
+
+
+
+
+// $ciao, #{$nome}"
+
+// $nome = "Milton"
+
+// $greetingsText = "ciao, #{$nome}";
+
+// print($greetingsText); => ciao, Milton
+
+// Patrizio Esposito17:23
+
+// console.log(variabile1, variabile2)
+
+// $nome: "milton"
+
+// =
+
+// :
+
+// Tu17:25
+
+
+
+
+
+
+
+// $parola: ciao,
+
+// $nome: milton
+
+// $frase: '#{$parola} #{$nome}'
+
+
+
+
+
+
+
+// Patrizio Esposito17:30
+// https://sass-lang.com/documentation/modules/string
+
+
+
+
+
